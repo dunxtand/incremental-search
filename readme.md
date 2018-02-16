@@ -35,17 +35,13 @@ IncrementalSearch({
     highlightColor: "#006cff",
     linkClass: "class-to-give-the-anchor-elements",
     onNoMatches: function (words) {
+        // called when there are no input matches
         // words is array of strings from user input
     },
     afterAppend: function (words, matches) {
+        // called after results are appended to list
         // words is array of string from user input
-        // mathces is array of objects that matched query
-    },
-    formFocusin: function (e) {
-        // called when form's focusin event is emitted
-    },
-    formFocusout: function (e) {
-        // called when form's focusout event is emitted
+        // matches is array of objects that matched query
     },
     mapping: { // more about this below
         added_tags: {

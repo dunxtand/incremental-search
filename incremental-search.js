@@ -1,7 +1,10 @@
-// this file is for reference and testing; it is not run on the site.
-// a minified version of this file is in libs.js.
-
 window.IncrementalSearch = (function ($, window, document, removeStopWords, undefined) {
+  if (!removeStopWords) {
+    removeStopWords = function (str) {
+      return str;
+    }
+  }
+
   function isFunction (fn) {
     return fn && ("function" === typeof fn);
   }
@@ -174,11 +177,5 @@ window.IncrementalSearch = (function ($, window, document, removeStopWords, unde
     form.submit(function (e) {
       e.preventDefault();
     });
-    if (settings.formFocusin && "function" === typeof settings.formFocusin) {
-      form.focusin(settings.formFocusin);
-    }
-    if (settings.formFocusout && "function" === typeof settings.formFocusout) {
-      form.focusout(settings.formFocusout);
-    }
   }
 })(jQuery, window, document);
