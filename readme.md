@@ -6,7 +6,7 @@ An small jQuery-dependent module that searches an array of objects and adds link
 
 The text input element must be within a form, and must be the only input element in that form.
 
-The list element must be of type <ul> or <ol>.
+The list element must be of type ul or ol.
 
 ### Usage
 
