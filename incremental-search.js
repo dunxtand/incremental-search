@@ -84,7 +84,7 @@ window.IncrementalSearch = (function ($, window, document, removeStopWords, unde
         return match;
       },
       // returns titled with bolded substrings
-      highlightedTitle (words) {
+      highlightedTitle: function (words) {
         var textArr = this.originalTitle.split(REGEX.white);
         var opening = "<span style='font-weight:bold;color:" + highlightColor + ";'>",
             closing = "</span>";
@@ -107,7 +107,7 @@ window.IncrementalSearch = (function ($, window, document, removeStopWords, unde
         link.attr("href", this.url);
         link.addClass(linkClass || ITEM_LINK_CLASS);
         link.html(this.highlightedTitle.call(this, words));
-        return $("<li></li>").addClass("").append(link);
+        return $("<li></li>").append(link);
       }
     };
   }
