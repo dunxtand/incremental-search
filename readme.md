@@ -26,13 +26,13 @@ IncrementalSearch({
         {title: "A Title of a Page", url: "/path/to/page"},
         {title: "Another", url: "/an/other"}
     ],
-    searchableProps: ["title"],
+    searchableProps: ["title"], // properties of data objects to search
     form: $("#search-form"), // must be jQuery object
     list: $("#search-list"), // must be jQuery object
 
 
     // OPTIONAL
-    highlightColor: "#006cff",
+    highlightColor: "#006cff", // color to highlight matched words in title
     linkClass: "class-to-give-the-anchor-elements",
     onNoMatches: function (words) {
         // called when there are no input matches
