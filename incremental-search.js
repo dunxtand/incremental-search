@@ -114,7 +114,7 @@ window.IncrementalSearch = (function ($, window, document, removeStopWords, unde
 
   function createData (initialData, prototype, mapping) {
     return initialData.map(function (object) {
-      var newObject = Object.assign(
+      var newObject = $.extend(
         Object.create(prototype),
         object,
         {
