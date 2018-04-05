@@ -27,8 +27,8 @@ IncrementalSearch({
         {title: "Another", url: "/an/other"}
     ],
     searchableProps: ["title"], // properties of data objects to search
-    form: $("#search-form"), // must be jQuery object
-    list: $("#search-list"), // must be jQuery object
+    form: "#search-form", // selector for form element
+    list: "#search-list", // selector for list element
 
 
     // OPTIONAL

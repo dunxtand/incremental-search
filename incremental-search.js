@@ -165,9 +165,9 @@ window.IncrementalSearch = (function ($, window, document, removeStopWords, unde
         mapping = settings.mapping || {};
     var proto = createProto(settings.searchableProps, highlightColor, settings.linkClass),
         DATA = createData(settings.data, proto, mapping);
-    var form = settings.form,
+    var form = $(settings.form),
         input = form.find("input"),
-        list = settings.list;
+        list = $(settings.list);
     var handleInput = createInputHandler(input, list, {
       sortedMatchesFor: createSortedMatchesFor(DATA),
       onNoMatches: settings.onNoMatches,
