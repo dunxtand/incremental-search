@@ -1,4 +1,4 @@
-window.IncrementalSearch = (function ($, window, document, removeStopWords, undefined) {
+window.incrementalSearch = (function ($, window, document, removeStopWords, undefined) {
   if (!removeStopWords) {
     removeStopWords = function (str) {
       return str;
@@ -160,7 +160,7 @@ window.IncrementalSearch = (function ($, window, document, removeStopWords, unde
 
 
   // initialization function
-  return function (settings) {
+  var init = function (settings) {
     var highlightColor = settings.highlightColor || "#000",
         mapping = settings.mapping || {};
     var proto = createProto(settings.searchableProps, highlightColor, settings.linkClass),
@@ -178,4 +178,10 @@ window.IncrementalSearch = (function ($, window, document, removeStopWords, unde
       e.preventDefault();
     });
   }
+  // replace removeStopWords
+  init.stopwordsModule = function (mod) {
+    return (typeof mod === "function") && (removeStopWords = mod);
+  }
+  // return final function
+  return init;
 })(jQuery, window, document);

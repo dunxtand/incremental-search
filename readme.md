@@ -10,16 +10,27 @@ The list element must be of type ul or ol.
 
 ### Usage
 
-Link to on page (or just add contents of incremental-search.min.js to page):
+Install via npm and require module:
+
+````bash
+npm install incremental-search
+````
+````javascript
+var incrementalSearch = require("incremental-search");
+````
+
+Link to on page:
 
 ````html
 <script src="/path/to/incremental-search.min.js">
 ````
 
+Or just add contents of build/incremental-search.min.js to page.
+
 Initialize with required and optional arguments:
 
 ````javascript
-IncrementalSearch({
+incrementalSearch({
     // REQUIRED
     data: [
         // each object must have string properties 'title' and 'link'
@@ -79,5 +90,12 @@ added_tags: { // original name of property
 
 ## Notes
 
-* **Removing Stop Words**: You must pass in your own module to remove [stop words](https://en.wikipedia.org/wiki/Stop_words). Pass it into the module as the fourth argument, after $, window, and document. It must be a function that takes a string and returns a new string.
+* **Removing Stop Words**: You must pass in your own module to remove [stop words](https://en.wikipedia.org/wiki/Stop_words). Pass it into the module like so, before calling the function:
+
+````javascript
+incrementalSearch.stopwordsModule(stopwordsModule);
+````
+
+It must be a function that takes a string and returns a new string.
+
 * **Removing HTML and punctuation**: All searchable properties will be cleared of HTML and punctuation marks.

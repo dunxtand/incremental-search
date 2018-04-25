@@ -1,0 +1,22 @@
+{
+  "name": "incremental-search",
+  "version": "1.0.0",
+  "description": "An small jQuery-dependent module that searches an array of objects and adds links to a list as the user types.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dunxtand/incremental-search.git"
+  },
+  "author": "dunxtand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dunxtand/incremental-search/issues"
+  },
+  "homepage": "https://github.com/dunxtand/incremental-search#readme",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
