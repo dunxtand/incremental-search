@@ -1,7 +1,7 @@
 {
   "name": "incremental-search",
   "version": "1.0.0",
-  "description": "An small jQuery-dependent module that searches an array of objects and adds links to a list as the user types.",
+  "description": "A small jQuery-dependent module that searches an array of objects and adds links to a list as the user types.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

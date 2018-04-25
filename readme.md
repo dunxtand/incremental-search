@@ -1,6 +1,6 @@
 # jQuery Incremental Search
 
-An small jQuery-dependent module that searches an array of objects and adds links to a list as the user types.
+A small jQuery-dependent module that searches an array of objects and adds links to a list as the user types.
 
 ### Required Configuration
 
